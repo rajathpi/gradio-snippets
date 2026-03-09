@@ -1,0 +1,174 @@
+# ============================================================
+# GITHUB ISSUE TEMPLATE - BUG REPORT
+# File location: .github/ISSUE_TEMPLATE/bug.yml
+# ============================================================
+
+# --- TOP LEVEL METADATA ---
+
+# The name that appears in the "New Issue" template picker
+name: 🐛 Bug Report
+
+# A short description shown under the name in the template picker
+description: Report a bug or unexpected behaviour
+
+# Title that gets pre-filled in the issue title field
+title: "[BUG] "
+
+# Labels that get automatically applied to the issue when submitted
+labels: ["bug", "needs-triage"]
+
+# Assignees that get automatically assigned to the issue when submitted
+assignees:
+  - octocat  # replace with your GitHub username
+
+# ============================================================
+# BODY - This is where all your form fields are defined
+# Each item under body is a "block" with a specific type
+# ============================================================
+body:
+
+  # ----------------------------------------------------------
+  # TYPE 1: markdown
+  # Used to display static text/instructions to the user.
+  # This is NOT a field — user cannot type here.
+  # Great for adding context, warnings, or links.
+  # ----------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for taking the time to fill out this bug report! 🙏
+        Please read the [contribution guide](https://example.com) before submitting.
+        > ⚠️ Make sure you have searched for existing issues before creating a new one.
+
+  # ----------------------------------------------------------
+  # TYPE 2: input
+  # A single-line text field.
+  # ----------------------------------------------------------
+  - type: input
+    id: bug-title                          # unique ID for this field (used internally)
+    attributes:
+      label: Bug Summary                   # label shown above the field
+      description: A short, clear summary of what the bug is   # helper text shown below label
+      placeholder: e.g. App crashes when clicking the back button   # greyed out hint text inside the field
+    validations:
+      required: true                       # 🔴 makes this field REQUIRED — user cannot submit without filling this
+
+  # ----------------------------------------------------------
+  # TYPE 3: textarea
+  # A multi-line text field. Great for long descriptions.
+  # ----------------------------------------------------------
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug in detail. Include what you expected vs what actually happened.
+      placeholder: |
+        1. I went to screen X
+        2. I clicked on button Y
+        3. I expected Z to happen but instead...
+      value: |
+        **Steps to reproduce:**
+        1. 
+        2. 
+
+        **Expected behaviour:**
+
+        **Actual behaviour:**
+        
+      # 'value' pre-fills the textarea with default text
+      # unlike 'placeholder', this text is actually submitted if user doesn't change it
+      render: markdown                     # renders the input as markdown (adds syntax highlighting)
+    validations:
+      required: true
+
+  # ----------------------------------------------------------
+  # TYPE 4: dropdown
+  # A single-select dropdown menu.
+  # ----------------------------------------------------------
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How badly does this bug affect you?
+      options:                             # list of options shown in the dropdown
+        - Low — minor inconvenience
+        - Medium — feature is broken
+        - High — app is unusable
+        - Critical — data loss / security issue
+      default: 0                           # index of the default selected option (0 = first item)
+    validations:
+      required: true
+
+  # ----------------------------------------------------------
+  # TYPE 5: dropdown with multiple: true
+  # Allows user to select MORE THAN ONE option.
+  # ----------------------------------------------------------
+  - type: dropdown
+    id: affected-platforms
+    attributes:
+      label: Affected Platform(s)
+      description: Which platforms are affected? You can select multiple.
+      multiple: true                       # ✅ allows multi-select
+      options:
+        - Android
+        - iOS
+        - Web
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  # ----------------------------------------------------------
+  # TYPE 6: checkboxes
+  # A list of checkboxes. Each item can be required individually.
+  # ----------------------------------------------------------
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched for existing issues and this is not a duplicate
+          required: true                   # 🔴 this specific checkbox MUST be checked to submit
+
+        - label: I have read the contribution guidelines
+          required: true
+
+        - label: I have attached relevant screenshots or logs
+          required: false                  # optional checkbox
+
+  # ----------------------------------------------------------
+  # TYPE 7: textarea used for logs/code
+  # Using 'render' to format it as code
+  # ----------------------------------------------------------
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Stack Trace
+      description: Paste any error logs here. This will be formatted as code automatically.
+      render: shell                        # formats content as shell/code block (no markdown needed)
+      placeholder: Paste your logs here...
+    validations:
+      required: false                      # optional field
+
+  # ----------------------------------------------------------
+  # TYPE 8: input for version/environment info
+  # ----------------------------------------------------------
+  - type: input
+    id: version
+    attributes:
+      label: App Version
+      description: What version of the app are you running?
+      placeholder: e.g. v1.2.3
+    validations:
+      required: true
+
+  # ----------------------------------------------------------
+  # Final markdown block — closing note
+  # ----------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Thank you for submitting! Our team will look into this shortly. 🚀
