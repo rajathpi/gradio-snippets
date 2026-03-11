@@ -1,0 +1,105 @@
+# ============================================================
+# GITHUB ISSUES TEMPLATE - FEATURE
+# File location: .github/ISSUE_TEMPLATE/feature.yml
+# ============================================================
+
+name: Feature
+description: Use this template to create an Feature
+# title: "[FEATURE] "
+type: Feature
+body:
+  # ------------------------------------------------------------
+  # User Story
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## User Story"
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: "As a .../ I want ... / So that ..."
+      placeholder: |
+        As a ...
+        I want ...
+        So that ...
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Description
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Description"
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Acceptance Criteria
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Acceptance Criteria"
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Definition of Done
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Definition of Done"
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Not included
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Not included"
+  - type: textarea
+    id: not-included
+    attributes:
+      label: Not included
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Dependencies
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Dependencies"
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+    validations:
+      required: false
+
+  # ------------------------------------------------------------
+  # Notes
+  # ------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: "## Notes"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+    validations:
+      required: false
