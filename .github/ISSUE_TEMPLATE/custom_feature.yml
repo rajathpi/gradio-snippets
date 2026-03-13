@@ -20,7 +20,7 @@ body:
       required: false
 
   - type: textarea
-    id: user-story
+    id: feature-user-story
     attributes:
       label: User Story
       description: Describe the feature from the user's perspective
@@ -32,7 +32,7 @@ body:
       required: true
 
   - type: textarea
-    id: description
+    id: feature-description
     attributes:
       label: Description
       description: >
@@ -42,7 +42,7 @@ body:
       required: false
 
   - type: textarea
-    id: acceptance-criteria
+    id: feature-acceptance-criteria
     attributes:
       label: Acceptance Criteria
       description: Conditions that must be met for this feature to be complete
