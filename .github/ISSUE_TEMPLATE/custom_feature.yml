@@ -53,7 +53,7 @@ body:
       required: true
 
   - type: dropdown
-    id: domain
+    id: feature-domain
     attributes:
       label: Domain Area
       description: Primary domain this feature belongs to
@@ -109,7 +109,7 @@ body:
       required: true
 
   - type: dropdown
-    id: priority
+    id: feature-priority
     attributes:
       label: Priority
       options:
@@ -130,7 +130,7 @@ body:
       required: false
 
   - type: dropdown
-    id: safety-relevance
+    id: feature-safety-relevance
     attributes:
       label: ISO 26262 Safety Relevance
       description: Does this feature involve safety-critical work?
@@ -142,7 +142,7 @@ body:
       required: true
 
   - type: textarea
-    id: dependencies
+    id: feature-dependencies
     attributes:
       label: Dependencies
       description: Related issues, PRs, or external blockers

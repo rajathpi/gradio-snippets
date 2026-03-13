@@ -67,7 +67,7 @@ body:
       required: true
 
   - type: dropdown
-    id: domain
+    id: epic-domain
     attributes:
       label: Domain Area
       description: Primary domain this epic belongs to
@@ -105,7 +105,7 @@ body:
       required: true
 
   - type: dropdown
-    id: priority
+    id: epic-priority
     attributes:
       label: Priority
       options:
@@ -126,7 +126,7 @@ body:
       required: false
 
   - type: textarea
-    id: dependencies
+    id: epic-dependencies
     attributes:
       label: Dependencies & Risks
       description: Other epics, external deliveries, or blockers
@@ -137,7 +137,7 @@ body:
       required: false
 
   - type: dropdown
-    id: safety-relevance
+    id: epic-safety-relevance
     attributes:
       label: ISO 26262 Safety Relevance
       description: Does this epic involve safety-critical work?
